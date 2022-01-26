@@ -24,7 +24,7 @@ RUN yarn tsc
 RUN yarn --cwd packages/backend backstage-cli backend:bundle --build-dependencies
 
 # Stage 3 - Build the actual backend image and install production dependencies
-FROM node:16
+FROM node:16-buster-slim
 
 WORKDIR /app
 
